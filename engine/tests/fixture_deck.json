@@ -1,0 +1,56 @@
+{
+  "title": "Brand Health 2026",
+  "subtitle": "What our clients told us",
+  "slides": [
+    {"type": "cover", "content": {"title": "Brand Health Check 2026", "subtitle": "Client perception study for the Board", "date_line": "October 2026"}},
+    {"type": "agenda", "content": {"title": "Agenda", "kicker": "Overview", "notes": "", "items": ["Key results", "Perception by market", "Roadmap", "Next steps"]}},
+    {"type": "section", "content": {"title": "Key results", "number": "01"}},
+    {"type": "kpis", "content": {"title": "Key insights", "kicker": "General results", "notes": "n", "kpis": [
+      {"value": "67%", "label": "Response rate", "context": "vs. 75% in July 2025", "sentiment": "negative"},
+      {"value": "-1", "label": "eNPS score", "context": "vs. -2 in July 2025", "sentiment": "positive"},
+      {"value": "70%", "label": "Satisfied employees", "context": "vs. 72% in July 2025", "sentiment": "neutral"}],
+      "takeaway": "Satisfaction is stable while eNPS keeps its steady two-year climb from -23 to -1."}},
+    {"type": "chart", "content": {"title": "eNPS over time", "kicker": "General results", "notes": "", "chart_type": "line",
+      "categories": ["Dec 23", "July 24", "Dec 24", "July 25", "Dec 25"], "series": [{"name": "eNPS", "values": [-14, -11, -2, -2, -1]}],
+      "unit": "", "takeaways": ["eNPS improved by 13 points in two years", "Growth has plateaued since Dec 24", "Promoters share is the lever"]}},
+    {"type": "chart", "content": {"title": "Response rate by team", "kicker": "Participation", "notes": "", "chart_type": "column",
+      "categories": ["People Experience", "Presentation Design Team", "Growth Team", "Client Service", "Digital Platforms Team"],
+      "series": [{"name": "Dec 25", "values": [100, 88, 75, 64, 57]}, {"name": "Dec 24", "values": [92, 80, 81, 70, 60]}],
+      "unit": "%", "takeaways": ["Smaller teams respond most", "Digital Platforms lowest for second year"]}},
+    {"type": "chart", "content": {"title": "Promoter split", "kicker": "eNPS", "notes": "", "chart_type": "doughnut",
+      "categories": ["Promoters", "Passives", "Detractors"], "series": [{"name": "Dec 25", "values": [27, 46, 27]}],
+      "unit": "%", "takeaways": ["Passives are the largest group"]}},
+    {"type": "cards", "content": {"title": "Our strengths", "kicker": "Culture", "notes": "", "cards": [
+      {"icon": "teamwork", "heading": "Team culture", "text": "93% of employees can count on their coworkers' help and feel good in their teams."},
+      {"icon": "smiley", "heading": "Well-being", "text": "Highest rated category: strong psychological safety at 83%."},
+      {"icon": "diamond", "heading": "Kindness", "text": "The strongest lived value, seen in action by 94% of employees."},
+      {"icon": "coin", "heading": "Pay clarity", "text": "Lowest scores: salary review process and pay philosophy need attention."}]}},
+    {"type": "process", "content": {"title": "How we act on results", "kicker": "Next steps", "notes": "", "steps": [
+      {"label": "Share", "text": "Present results to the Board and senior leaders"},
+      {"label": "Discuss", "text": "Team managers review results with their teams"},
+      {"label": "Define actions", "text": "Agree two or three focus areas per team"},
+      {"label": "Track", "text": "Review progress monthly with PX business partners"},
+      {"label": "Re-measure", "text": "Check progress in the July pulse survey"}]}},
+    {"type": "timeline", "content": {"title": "Survey roadmap", "kicker": "Planning", "notes": "", "milestones": [
+      {"date": "Jan 26", "label": "Results shared", "text": "Board and leadership review"},
+      {"date": "Mar 26", "label": "Team actions", "text": "Each team defines focus areas"},
+      {"date": "Jul 26", "label": "Pulse survey", "text": "Short check on key items"},
+      {"date": "Dec 26", "label": "Annual survey", "text": "Full engagement survey"}]}},
+    {"type": "comparison", "content": {"title": "What works and what doesn't", "kicker": "Employee voice", "notes": "",
+      "left": {"heading": "What is good", "points": ["People in Admind", "Team spirit", "Atmosphere and working environment", "Interesting projects"]},
+      "right": {"heading": "What could improve", "points": ["Salaries or raises", "Development opportunities", "Workload and high pace"]}}},
+    {"type": "matrix", "content": {"title": "Priority matrix", "kicker": "Focus", "notes": "", "x_axis": "Impact", "y_axis": "Effort",
+      "quadrants": [{"heading": "Plan", "text": "High effort, low impact: deprioritise"}, {"heading": "Big bets", "text": "Pay philosophy review and career paths"},
+        {"heading": "Ignore", "text": "Low effort, low impact"}, {"heading": "Quick wins", "text": "Hardware upgrades and wiki clean-up"}]}},
+    {"type": "table", "content": {"title": "Highest scores", "kicker": "Detailed results", "notes": "",
+      "columns": ["Statement", "Score", "Change"], "rows": [["I can count on my coworkers' help.", "4.57", "▲ 0.30"],
+        ["I feel good in my team.", "4.47", "▲ 0.19"], ["Good Morning Admind", "4.48", "▼ 0.06"], ["Kindness", "4.45", "▲ 0.11"]],
+      "note": "Statements ranked on a scale from 1 to 5."}},
+    {"type": "quote", "content": {"quote": "Admind fosters a collaborative, creative and supportive environment where employees are encouraged to grow.", "author": "Employee comment", "notes": ""}},
+    {"type": "statement", "content": {"statement": "We increased eNPS by 22 points in 2.5 years", "notes": ""}},
+    {"type": "bullets", "content": {"title": "Recommended next steps", "kicker": "Next steps", "notes": "", "illustration": "stairs", "bullets": [
+      "Thank the team for participation and honest feedback", "Share key findings during the team meeting", "Align with your PX business partner on priorities",
+      "Define actions for selected areas together with the team", "Check progress in the next survey"]}},
+    {"type": "closing", "content": {"title": "Thank you", "contact": "krk@admindagency.com"}}
+  ]
+}

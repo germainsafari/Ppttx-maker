@@ -1,0 +1,66 @@
+# Admind Deck Builder - on-prem stack for the GPU workstation.
+#   docker compose -f infra/docker-compose.yml up -d vllm engine        # model + engine
+#   docker compose -f infra/docker-compose.yml --profile tunnel up -d    # + Cloudflare tunnel
+name: admind-decks
+
+services:
+  vllm:
+    image: vllm/vllm-openai:nightly
+    container_name: vllm
+    restart: unless-stopped
+    ports: ["8080:8000"]
+    ipc: host
+    gpus: all
+    volumes:
+      - hf-cache:/root/.cache/huggingface
+    environment:
+      HF_HUB_ENABLE_HF_TRANSFER: "0"
+    # Qwen3.6-35B-A3B NVFP4: ~22 GB weights on a 32 GB RTX 5090; 3B active params -> fast; multimodal.
+    command:
+      - nvidia/Qwen3.6-35B-A3B-NVFP4
+      - --served-model-name=qwen3.6-35b-a3b
+      - --quantization=modelopt
+      - --kv-cache-dtype=fp8
+      - --max-model-len=${VLLM_MAX_MODEL_LEN:-65536}
+      - --gpu-memory-utilization=${VLLM_GPU_UTIL:-0.88}
+      - --max-num-seqs=8
+      - --max-num-batched-tokens=8192
+      - --enable-prefix-caching
+      - --reasoning-parser=qwen3
+      - '--limit-mm-per-prompt={"image":4,"video":0}'
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8000/v1/models"]
+      interval: 30s
+      timeout: 5s
+      start_period: 600s
+
+  engine:
+    build: ../engine
+    container_name: deck-engine
+    restart: unless-stopped
+    ports: ["8090:8090"]
+    environment:
+      LLM_BASE_URL: http://vllm:8000/v1
+      LLM_CONCURRENCY: "8"
+      ENGINE_TOKEN_SECRET: ${ENGINE_TOKEN_SECRET:-}
+      ENGINE_API_KEYS: ${ENGINE_API_KEYS:-}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      JOB_RETENTION_HOURS: "72"
+    volumes:
+      - engine-data:/data
+    depends_on:
+      - vllm
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    profiles: ["tunnel"]
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-}
+    depends_on:
+      - engine
+
+volumes:
+  hf-cache:
+  engine-data:

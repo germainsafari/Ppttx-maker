@@ -1,0 +1,152 @@
+{
+ "icon/lightbulb": {
+  "file": "icon_lightbulb.png",
+  "kind": "icon",
+  "tags": "idea insight innovation tip learning"
+ },
+ "icon/teamwork": {
+  "file": "icon_teamwork.png",
+  "kind": "icon",
+  "tags": "collaboration teamwork culture partnership cooperation"
+ },
+ "icon/diamond": {
+  "file": "icon_diamond.png",
+  "kind": "icon",
+  "tags": "value quality premium strength excellence"
+ },
+ "icon/plant": {
+  "file": "icon_plant.png",
+  "kind": "icon",
+  "tags": "growth sustainability development progress environment"
+ },
+ "icon/crown": {
+  "file": "icon_crown.png",
+  "kind": "icon",
+  "tags": "leadership best top winner board"
+ },
+ "icon/magnifier": {
+  "file": "icon_magnifier.png",
+  "kind": "icon",
+  "tags": "research analysis search insight audit data"
+ },
+ "icon/pencil": {
+  "file": "icon_pencil.png",
+  "kind": "icon",
+  "tags": "design creative writing content brand"
+ },
+ "icon/bowl": {
+  "file": "icon_bowl.png",
+  "kind": "icon",
+  "tags": "wellbeing benefits food care health"
+ },
+ "icon/coin": {
+  "file": "icon_coin.png",
+  "kind": "icon",
+  "tags": "finance money budget salary pay cost revenue"
+ },
+ "icon/smiley": {
+  "file": "icon_smiley.png",
+  "kind": "icon",
+  "tags": "satisfaction happiness people engagement experience"
+ },
+ "icon/head": {
+  "file": "icon_head.png",
+  "kind": "icon",
+  "tags": "strategy thinking mind mental communication"
+ },
+ "icon/bicycle": {
+  "file": "icon_bicycle.png",
+  "kind": "icon",
+  "tags": "mobility journey balance movement transport"
+ },
+ "icon/asterisk": {
+  "file": "icon_asterisk.png",
+  "kind": "icon",
+  "tags": "decoration spark"
+ },
+ "sphere/teal": {
+  "file": "sphere_teal.png",
+  "kind": "sphere",
+  "tags": ""
+ },
+ "sphere/teal2": {
+  "file": "sphere_teal2.png",
+  "kind": "sphere",
+  "tags": ""
+ },
+ "sphere/cream": {
+  "file": "sphere_cream.png",
+  "kind": "sphere",
+  "tags": ""
+ },
+ "sphere/cream2": {
+  "file": "sphere_cream2.png",
+  "kind": "sphere",
+  "tags": ""
+ },
+ "sphere/coral": {
+  "file": "sphere_coral.png",
+  "kind": "sphere",
+  "tags": ""
+ },
+ "sphere/coral2": {
+  "file": "sphere_coral2.png",
+  "kind": "sphere",
+  "tags": ""
+ },
+ "hand/ok_pink": {
+  "file": "hand_ok_pink.png",
+  "kind": "hand",
+  "tags": ""
+ },
+ "hand/finger_red": {
+  "file": "hand_finger_red.png",
+  "kind": "hand",
+  "tags": ""
+ },
+ "hand/finger_red2": {
+  "file": "hand_finger_red2.png",
+  "kind": "hand",
+  "tags": ""
+ },
+ "hand/teal_up": {
+  "file": "hand_teal_up.png",
+  "kind": "hand",
+  "tags": ""
+ },
+ "hand/thumb_teal": {
+  "file": "hand_thumb_teal.png",
+  "kind": "hand",
+  "tags": ""
+ },
+ "illustration/stairs": {
+  "file": "illustration_stairs.png",
+  "kind": "illustration",
+  "tags": "next steps progress roadmap growth climb plan"
+ },
+ "illustration/people_sphere": {
+  "file": "illustration_people_sphere.png",
+  "kind": "illustration",
+  "tags": "team people community celebration culture"
+ },
+ "illustration/hands_heart": {
+  "file": "illustration_hands_heart.png",
+  "kind": "illustration",
+  "tags": "care wellbeing love values support"
+ },
+ "illustration/documents": {
+  "file": "illustration_documents.png",
+  "kind": "illustration",
+  "tags": "research report documents analysis review"
+ },
+ "illustration/eyes": {
+  "file": "illustration_eyes.png",
+  "kind": "illustration",
+  "tags": "vision perception attention brand awareness"
+ },
+ "illustration/logo_a": {
+  "file": "illustration_logo_a.png",
+  "kind": "illustration",
+  "tags": "admind logo"
+ }
+}

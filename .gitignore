@@ -1,0 +1,9 @@
+.env
+.env.local
+**/.venv/
+**/__pycache__/
+engine/data/
+engine/tests/out/
+web/node_modules/
+web/.next/
+tools/renders/
