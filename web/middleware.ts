@@ -1,19 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
+import { SESSION_COOKIE, validSession } from "./lib/session";
 
-// Simple team gate: HTTP basic auth with a shared password (any username).
-export function middleware(req: NextRequest) {
-  const password = process.env.APP_PASSWORD;
-  if (!password) return NextResponse.next();
-  const header = req.headers.get("authorization") || "";
-  if (header.startsWith("Basic ")) {
-    const decoded = atob(header.slice(6));
-    const pass = decoded.slice(decoded.indexOf(":") + 1);
-    if (pass === password) return NextResponse.next();
-  }
-  return new NextResponse("Authentication required", {
-    status: 401,
-    headers: { "WWW-Authenticate": 'Basic realm="Admind Deck Builder"' },
-  });
+// Team gate: shared password (APP_PASSWORD) entered on /login, remembered in a signed cookie.
+export async function middleware(req: NextRequest) {
+  if (!process.env.APP_PASSWORD) return NextResponse.next();
+  const { pathname } = req.nextUrl;
+  if (pathname === "/login" || pathname === "/api/login") return NextResponse.next();
+  if (await validSession(req.cookies.get(SESSION_COOKIE)?.value)) return NextResponse.next();
+  if (pathname.startsWith("/api/")) return NextResponse.json({ error: "Sign in required" }, { status: 401 });
+  const url = req.nextUrl.clone();
+  url.pathname = "/login";
+  url.search = pathname === "/" ? "" : `?next=${encodeURIComponent(pathname)}`;
+  return NextResponse.redirect(url);
 }
 
 export const config = { matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"] };
