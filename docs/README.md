@@ -11,6 +11,7 @@ Read in order for the full picture, or jump to what you need.
 7. [Engine API](07-engine-api.md) - endpoints, authentication, job storage
 8. [Web app](08-web-app.md) - Next.js front end, login, direct uploads
 9. [Deployment](09-deployment.md) - Docker, Cloudflare tunnel, Vercel, configuration, operations, security
+13. [Deploy for your team](13-deploy-for-team.md) - step-by-step checklist (Vercel + tunnel; Render notes)
 10. [Testing](10-testing.md) - fixture, smoke, scenarios, end-to-end, review workflow
 11. [Code map](11-code-map.md) - every file explained
 12. [Extending](12-extending.md) - new slide types, other brands, other models, limitations, next steps

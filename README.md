@@ -44,7 +44,8 @@ python -m venv .venv; .venv\Scripts\pip install -r requirements.txt     # once
 .venv\Scripts\python -m app.cli -p "Summarise this survey for the board" -f "..\Survey Dec 25 - Brand Advisory.pptx" -n 8 -o out
 ```
 
-Going live (Cloudflare tunnel subdomain + Vercel) is described in [docs/09-deployment.md](docs/09-deployment.md).
+**Team deployment (Vercel + Cloudflare tunnel):** [docs/13-deploy-for-team.md](docs/13-deploy-for-team.md).  
+Full ops detail: [docs/09-deployment.md](docs/09-deployment.md).
 
 ## Documentation
 
